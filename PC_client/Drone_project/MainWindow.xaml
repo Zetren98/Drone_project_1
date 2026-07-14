@@ -1,0 +1,73 @@
+<Window x:Class="DroneController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Drone Controller — DualShock 4 → ESP-NOW" Height="520" Width="480"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Serial Connection" Grid.Row="0" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Margin="8">
+                <TextBlock Text="COM Port:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                <ComboBox x:Name="ComPortComboBox" Width="120" Margin="0,0,8,0"/>
+                <Button x:Name="RefreshPortsButton" Content="Refresh" Width="80" Click="RefreshPortsButton_Click" Margin="0,0,8,0"/>
+                <Button x:Name="ConnectSerialButton" Content="Connect" Width="100" Click="ConnectSerialButton_Click"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Gamepad (DualShock 4)" Grid.Row="1" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Margin="8">
+                <Button x:Name="ConnectGamepadButton" Content="Find and connect gamepad" Width="220" Click="ConnectGamepadButton_Click" Margin="0,0,8,0"/>
+                <TextBlock x:Name="GamepadStatusText" Text="not connected" VerticalAlignment="Center" Foreground="Red"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Flight Status" Grid.Row="2" Margin="0,0,0,10">
+            <StackPanel Margin="8">
+                <TextBlock x:Name="ArmStatusText" Text="disarmed" FontSize="20" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center"/>
+                <TextBlock Text="L1 — ARM / DISARM   |   R1 — ALTHOLD   |   L2/R2 — Roll"
+                           HorizontalAlignment="Center" Margin="0,4,0,0" FontStyle="Italic" Foreground="Gray"/>
+                <TextBlock x:Name="SendStatusText" Text="transmit: stopped" HorizontalAlignment="Center" Margin="0,6,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Channels (1000–2000 µs)" Grid.Row="3">
+            <StackPanel Margin="8">
+
+                <TextBlock Text="Throttle (left stick, vertical)"/>
+                <ProgressBar x:Name="ThrottleBar" Minimum="1000" Maximum="2000" Height="18" Margin="0,2,0,2"/>
+                <TextBlock x:Name="ThrottleValueText" Text="1500" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Roll (L2 = left, R2 = right)"/>
+                <ProgressBar x:Name="RollBar" Minimum="1000" Maximum="2000" Height="18" Margin="0,2,0,2"/>
+                <TextBlock x:Name="RollValueText" Text="1500" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Pitch (right stick, vertical)"/>
+                <ProgressBar x:Name="PitchBar" Minimum="1000" Maximum="2000" Height="18" Margin="0,2,0,2"/>
+                <TextBlock x:Name="PitchValueText" Text="1500" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Yaw (right stick, horizontal)"/>
+                <ProgressBar x:Name="YawBar" Minimum="1000" Maximum="2000" Height="18" Margin="0,2,0,2"/>
+                <TextBlock x:Name="YawValueText" Text="1500" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Aux1 — ARM (L1)"/>
+                <ProgressBar x:Name="Aux1Bar" Minimum="1000" Maximum="2000" Height="18" Margin="0,2,0,2"/>
+                <TextBlock x:Name="Aux1ValueText" Text="1000" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Aux2 — ALTHOLD (R1)"/>
+                <ProgressBar x:Name="Aux2Bar" Minimum="1000" Maximum="2000" Height="18" Margin="0,2,0,2"/>
+                <TextBlock x:Name="Aux2ValueText" Text="1000"/>
+
+            </StackPanel>
+        </GroupBox>
+
+        <TextBlock Grid.Row="4" Text="Throttle at center stick = 1500, not 1000! Keep this in mind during your first bench test."
+                   Foreground="DarkOrange" TextWrapping="Wrap" Margin="0,10,0,0" FontWeight="Bold"/>
+    </Grid>
+</Window>

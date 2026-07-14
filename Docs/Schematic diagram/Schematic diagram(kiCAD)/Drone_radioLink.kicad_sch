@@ -1,0 +1,161 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "e5c6a39e-92a1-4bc5-bf1c-d9f3548d1e74")
+	(paper "A4")
+	(title_block
+		(title "Schematic Diagram")
+		(date "2026-07-10")
+		(rev "1.0")
+	)
+	(lib_symbols)
+	(text "RF LINK: ESP-NOW(2.4 GHz)"
+		(exclude_from_sim no)
+		(at 151.384 69.85 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "a830aa0e-1dba-4f99-8563-5230ad1a58fd")
+	)
+	(polyline
+		(pts
+			(xy 118.11 72.39) (xy 184.15 72.39)
+		)
+		(stroke
+			(width 1.27)
+			(type dot)
+			(color 0 0 0 1)
+		)
+		(uuid "08830f37-cd90-4ba1-b4f7-5056cf1d5a20")
+	)
+	(sheet
+		(at 184.15 44.45)
+		(size 80.01 55.88)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "05628bc8-ea66-4bde-bcc3-67774393545a")
+		(property "Sheetname" "Drone_and_RX"
+			(at 184.15 43.7384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "drone.kicad_sch"
+			(at 184.15 100.9146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Kicad"
+				(path "/e5c6a39e-92a1-4bc5-bf1c-d9f3548d1e74"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 39.37 44.45)
+		(size 78.74 55.88)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7d4d1855-e0ca-4d21-8f82-6f254b968c6a")
+		(property "Sheetname" "Transmitter_TX"
+			(at 39.37 43.7384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "TX_module.kicad_sch"
+			(at 39.37 100.9146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Kicad"
+				(path "/e5c6a39e-92a1-4bc5-bf1c-d9f3548d1e74"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+	(embedded_files
+		(file
+			(name "A3_ISO5457-1999_ISO7200-2004_EN.kicad_wks")
+			(type worksheet)
+			(data |KLUv/WAYJJ0iADbpdh8gkx7/JjhWLdelm0QRAoDOBORCihCSlqh81BXA8QDCcgBoAGkA1GeVEEaM
+				4USfP/uu+sUsx8E3mLtN1+7ja8mC3aglfDGcVfmKhc6YylvUUq5u5OB9NxQWda4u3mQ5Z1bLsmcw
+				Fo4k941ZGExtKvlyLyn65DqTLZbnYtYVSXHyviFry5+bo9Y4+W5RNyCQORmIuioXQ2lRjfdnuPuF
+				V4Wknng+ERJho1vo9rl9t+7Wua3+KH1zvpQfo0Po78l/fDN2qwZdrLxxNO9FnbHs8oWO3lumRS3l
+				z50c3Dt/brYZUzqxxDhiDN+/f5S+c0rdu2ppnVZGC2t91v57Xqvz/xoWlqnuRPp+6vB1nYIpa9fS
+				97LWhmXadiOCWp06dfHhw+rRI/3/n1BCKZ18kUL5mtb2WJ901H/+/HbytaOPOixk7M/VvpnKGbbv
+				up3H6JJr16BP1Fv2QjvIwbEMA7oyjeKJJY6PYQI/xH+AgDQnh04+BgYJ9PoU7tHFk3BG4kuncDE+
+				nXDizxVv+kcZVM/3ZiRxchGDUQ6HlbNtVl+ySafOjUifuUGYupemcSRNuFe2Ji7KjZOpvMWPGih3
+				xu6GU2WLJ2Enw5qGiO6BbFtupi5WTPi3wi6+l4v7oqqBUKjRaEtGRCRJUkhz8REhiCxb5UJAFMMw
+				EMPBFMgxHMIgjkREQARESAREQIwxxiipdmCbG+cYr/cMEUjBYKhkWSLVK5i1dQ0UxNESr0YDS/+n
+				Cpqc7EjPDCYtyFVBOJtbUvYvofaFWTH9QSo/dmyHxEK1H1obGPpPXfXsPIBHhKDxitZSjBAhwtxf
+				f4jyk1SXRBdBk1VZo2CGIHEJxI59PDyN3hP63wPJiKr3vlcl+BJR3Dc7QywJJ1WO8AcQJNT8NUmP
+				OsRnZDECYlaTZOPZxPTV7iz8IUcQFlQ8AUp+LBFGmZzi3vpUeQxaY4fE2F2WphEBSDkQtjWhf+kG
+				LxaqqVchYUGihEERKtAVJDmzViJBuSZKnb8NYtqFVOHCBWAb/JNKMsgnWviAtEISXcCAOFrtItOH
+				ZawqjK2WOuiGX2OhwR8QDBZ8u47iUMQJ5xuds9pMvyFKAAMlgGH1hpC+aOUGdAfevni1I+l9/3DN
+				mTqkJnZHDsmM3+GgDm8YqMYXDqrxhINq/OCgGl1wkgq8/t3oSbb1JNt6km09yTb0jJPs6xEj2VqQ
+				bXSTB5cBMo1Ztt1dRA0iIuWBbzAdHCUlNXTNk6FSTx1SKI1SktrxqYA5krR4bjFdU5ZJx600YEHX
+				MkStGiWc0glIhSaJ8sGkrorPPBc0JlTEe6HQ0ySBQpw57Pnj2TpvbgWT1O4pEnzDK0NXvXlSpWZX
+				min5sOXduC1aMJaQBOgO4ZbMKR7+I2DJKs/eeGDk47LJfEnHDd26ZRTWx1cS+4YPxVHgIa4hrUiM
+				ZqqBliFIZDrtkikbgzI0KNZImtwQ6FzEIB2DrEUcRWulCg==|
+			)
+			(checksum "A3E8DE2F1122A19AE73438EBCD65116F")
+		)
+	)
+)

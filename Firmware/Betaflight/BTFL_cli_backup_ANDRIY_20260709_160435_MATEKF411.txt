@@ -1,0 +1,226 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F411 (S411) 4.2.0 Jun 14 2020 / 03:04:43 (8f2d21460) MSP API: 1.43
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF411
+manufacturer_id MTKS
+mcu_id 003b00233134510333343336
+signature 
+
+# name: Andriy
+
+# resources
+resource BEEPER 1 B02
+resource MOTOR 1 B04
+resource MOTOR 2 B05
+resource MOTOR 3 B06
+resource MOTOR 4 B07
+resource MOTOR 5 B03
+resource MOTOR 6 B10
+resource PPM 1 A03
+resource LED_STRIP 1 A08
+resource SERIAL_TX 1 A09
+resource SERIAL_TX 2 A02
+resource SERIAL_RX 1 A10
+resource SERIAL_RX 2 A03
+resource I2C_SCL 1 B08
+resource I2C_SDA 1 B09
+resource LED 1 C13
+resource LED 2 C14
+resource SPI_SCK 1 A05
+resource SPI_SCK 2 B13
+resource SPI_MISO 1 A06
+resource SPI_MISO 2 B14
+resource SPI_MOSI 1 A07
+resource SPI_MOSI 2 B15
+resource ADC_BATT 1 B00
+resource ADC_CURR 1 B01
+resource OSD_CS 1 B12
+resource GYRO_EXTI 1 A01
+resource GYRO_CS 1 A04
+resource USB_DETECT 1 C15
+
+# timer
+timer A03 AF3
+# pin A03: TIM9 CH2 (AF3)
+timer B04 AF2
+# pin B04: TIM3 CH1 (AF2)
+timer B05 AF2
+# pin B05: TIM3 CH2 (AF2)
+timer B06 AF2
+# pin B06: TIM4 CH1 (AF2)
+timer B07 AF2
+# pin B07: TIM4 CH2 (AF2)
+timer B03 AF1
+# pin B03: TIM2 CH2 (AF1)
+timer B10 AF1
+# pin B10: TIM2 CH3 (AF1)
+timer A00 AF2
+# pin A00: TIM5 CH1 (AF2)
+timer A02 AF2
+# pin A02: TIM5 CH3 (AF2)
+timer A08 AF1
+# pin A08: TIM1 CH1 (AF1)
+
+# dma
+dma ADC 1 1
+# ADC 1: DMA2 Stream 4 Channel 0
+dma pin B04 0
+# pin B04: DMA1 Stream 4 Channel 5
+dma pin B05 0
+# pin B05: DMA1 Stream 5 Channel 5
+dma pin B06 0
+# pin B06: DMA1 Stream 0 Channel 2
+dma pin B07 0
+# pin B07: DMA1 Stream 3 Channel 2
+dma pin B03 0
+# pin B03: DMA1 Stream 6 Channel 3
+dma pin B10 0
+# pin B10: DMA1 Stream 1 Channel 3
+dma pin A00 0
+# pin A00: DMA1 Stream 2 Channel 6
+dma pin A02 0
+# pin A02: DMA1 Stream 0 Channel 6
+dma pin A08 0
+# pin A08: DMA2 Stream 6 Channel 0
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature MOTOR_STOP
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+# serial
+serial 0 2048 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+
+# led
+led 0 4,4::CB:4
+led 1 5,4::CB:11
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 3
+vtxtable powervalues 0 1 2
+vtxtable powerlabels 25 100 200
+
+# master
+set acc_calibration = 39,5,-12,1
+set align_mag = CW180
+set mag_align_yaw = 1800
+set mag_bustype = I2C
+set mag_i2c_device = 1
+set baro_bustype = I2C
+set baro_i2c_device = 1
+set max_check = 2000
+set serialrx_provider = CRSF
+set min_throttle = 1070
+set dshot_burst = AUTO
+set dshot_bitbang = OFF
+set use_unsynced_pwm = OFF
+set motor_pwm_rate = 10000
+set bat_capacity = 650
+set vbat_max_cell_voltage = 440
+set current_meter = NONE
+set battery_meter = ADC
+set ibata_scale = 16000
+set beeper_inversion = ON
+set beeper_od = OFF
+set yaw_motors_reversed = ON
+set 3d_deadband_throttle = 30
+set deadband = 5
+set yaw_deadband = 5
+set osd_tim2 = 513
+set osd_vbat_pos = 2433
+set osd_rssi_pos = 2401
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 2454
+set osd_flymode_pos = 2423
+set osd_throttle_pos = 225
+set osd_vtx_channel_pos = 377
+set osd_crosshairs_pos = 2253
+set osd_current_pos = 385
+set osd_mah_drawn_pos = 353
+set osd_craft_name_pos = 2441
+set osd_gps_speed_pos = 218
+set osd_gps_lon_pos = 82
+set osd_gps_lat_pos = 65
+set osd_gps_sats_pos = 51
+set osd_home_dir_pos = 302
+set osd_home_dist_pos = 303
+set osd_compass_bar_pos = 42
+set osd_altitude_pos = 247
+set osd_pid_roll_pos = 423
+set osd_pid_pitch_pos = 455
+set osd_pid_yaw_pos = 487
+set osd_debug_pos = 1
+set osd_power_pos = 321
+set osd_pidrate_profile_pos = 345
+set osd_warnings_pos = 2282
+set osd_avg_cell_voltage_pos = 76
+set osd_pit_ang_pos = 33
+set osd_rol_ang_pos = 65
+set osd_battery_usage_pos = 392
+set osd_disarmed_pos = 2379
+set osd_nheading_pos = 311
+set osd_nvario_pos = 279
+set osd_esc_tmp_pos = 82
+set osd_esc_rpm_pos = 83
+set osd_core_temp_pos = 268
+set osd_stat_tim_1 = ON
+set osd_stat_endbatt = ON
+set system_hse_mhz = 8
+set max7456_spi_bus = 2
+set gyro_1_bustype = SPI
+set gyro_1_spibus = 1
+set gyro_1_sensor_align = CW180
+set gyro_1_align_yaw = 1800
+set name = Andriy
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
